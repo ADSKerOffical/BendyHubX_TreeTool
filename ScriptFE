@@ -1,0 +1,222 @@
+local player = game.Players.LocalPlayer
+
+local currentMode = 1
+
+local function onItemActivated1()
+    local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = char:WaitForChild("HumanoidRootPart")
+local playerForward = humanoidRootPart.CFrame.LookVector
+local startPos = humanoidRootPart.Position + (5 * playerForward)
+
+local numUzumaki = 75
+local spacing = 3
+
+for i = 1, numUzumaki do
+    local args = {
+        [1] = startPos + ((i - 1) * spacing * Vector3.new(playerForward.X, 0, playerForward.Z))
+    }
+    game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+end
+end
+
+local function onItemActivated2()
+    local mouse = game:GetService("Players").LocalPlayer:GetMouse()
+local clickPosition = mouse.Hit.Position
+
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 10
+    local numUzumaki = 32
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+        local spawnPosition = Vector3.new(x, y, z)
+
+        local args = {
+            [1] = spawnPosition
+        }
+
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(clickPosition)
+end
+
+local function onItemActivated3()
+    local player = game.Players.LocalPlayer
+local playerPosition = player.Character.HumanoidRootPart.Position
+
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 10
+    local numUzumaki = 8
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(playerPosition)
+wait(0.5)
+game:GetService("RunService").Heartbeat:Wait()
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 30
+    local numUzumaki = 16
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(playerPosition)
+wait(0.5)
+game:GetService("RunService").Heartbeat:Wait()
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 55
+    local numUzumaki = 22
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(playerPosition)
+
+wait(0.5)
+game:GetService("RunService").Heartbeat:Wait()
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 80
+    local numUzumaki = 32
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(playerPosition)
+
+wait(0.5)
+game:GetService("RunService").Heartbeat:Wait()
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 105
+    local numUzumaki = 40
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(playerPosition)
+
+wait(0.5)
+game:GetService("RunService").Heartbeat:Wait()
+local function spawnUzumakiCircle(centerPosition)
+    local radius = 135
+    local numUzumaki = 55
+
+    for i = 1, numUzumaki do
+        local angle = (i - 1) * 2 * math.pi / numUzumaki
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+ game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+end
+
+spawnUzumakiCircle(playerPosition)
+end
+
+local function onItemActivated4()
+    local players = game:GetService("Players"):GetPlayers()
+for _, player in ipairs(players) do
+    if player ~= game.Players.LocalPlayer and player.Character then
+for i = 1, 20 do
+        local args = {
+            [1] = player.Character.HumanoidRootPart.Position
+        }
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+end
+    end
+end
+end
+
+local function setMode(mode)
+    currentMode = mode
+    print("Operating mode: " .. mode)
+end
+
+player.Chatted:Connect(function(message)
+    if message == "/toolmode1" then
+        setMode(1)
+    elseif message == "/toolmode2" then
+        setMode(2)
+    elseif message == "/toolmode3" then
+        setMode(3)
+elseif message == "/toolmode4" then
+        setMode(4)
+    end
+end)
+
+player.Character.ChildAdded:Connect(function(item)
+    if item.Name == "Wise Mystical Tree" then
+        item.Activated:Connect(function()
+            if currentMode == 1 then
+                onItemActivated1()
+            elseif currentMode == 2 then
+                onItemActivated2()
+            elseif currentMode == 3 then
+                onItemActivated3()
+            elseif currentMode == 4 then
+                onItemActivated4()
+            end
+        end)
+    end
+end)
